@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>App Name: A Coding Challenge</title>
+    <title>Hyaku: A Coding Challenge</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,54 +25,90 @@
 
 <body>
     <header>
-           <nav class="navbar navbar-expand-lg navbar-dark">
-               <div class="container-fluid">
-                   <a class="navbar-brand" href="/index.html">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
                     <img src="/img/Willicons/Will icon Seahawk.png" height="42" alt="developer logo" />
-                    App Name
+                    Hyaku
                 </a>
-                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                       aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                           <li class="nav-item">
-                               <a class="nav-link" href="/index.html">Home</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="/code.html">The Code</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="https://github.com/Fjeldhammer">The Repo</a>
-                           </li>
-                           <li class="nav-item">
-                            <a class="nav-link" href="https://fjeldhammer.netlify.app/">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                       </ul>
-                   </div>
-               </div>
-           </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/code.html">The Code</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/Fjeldhammer">The Repo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://fjeldhammer.netlify.app/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="container py-3">
-        <h1>APP UI GOES HERE</h1>
-
-        <input class="form-control" 
-            id="message" 
-            placeholder="Enter a message" 
-            type="text" />
-
-        <button class="btn btn-primary my-3" id="btnSubmit" type="button">
-            Display Message
-        </button>
+        <div class="row row-cols-1 row-cols-md-2 gy-2">
+            <div class="col border-end border-start border-2 border-info-subtle">
+                <h1 class="display-5">Hyaku: A Coding Challenge</h1>
+                <p class="lead">
+                    Live life one loop at a time! Hyaku is a JavaScript coding
+                    challenge using loops. The objective is to write a program
+                    which displays the numbers from 0 to 100, with the even
+                    numbers in <strong>BOLD</strong>.
+                </p>
+                <h2 class="mt-5 border-bottom border-2 border-info-subtle display-6">Instructions</h2>
+                <p>
+                    Enter a starting value and an ending value. Press the button
+                    to see the numbers appear on the page
+                </p>
+            </div>
+            <div class="col">
+                <h5>Enter Values:</h5>
+                <form action="#" class="row g-3">
+                    <div class="col-6">
+                        <label class="form-label" for="startValue">Start Value</label>
+                        <input class="form-control" id="startValue" name="startValue" type="number"
+                            placeholder="Start Value" value="1" aria-label="Start Value" />
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label" for="endValue">Start Value</label>
+                        <input class="form-control" id="endValue" name="endValue" type="number" placeholder="End Value"
+                            value="100" aria-label="End Value" />
+                    </div>
+                    <div class="col-12 text-end">
+                        <button class="btn btn-primary btn-lg" id="btnSubmit" type="button">
+                            Display The Hyaku
+                        </button>
+                    </div>
+                </form>
+                <h2 class="mt-5 border-bottom border-2 border-info-subtle">Results</h2>
+                <div class="card p-3 mt-3 shadow-sm">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <tbody id="results">
+                                <!-- Results go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer container-fluid py-3">
@@ -98,14 +134,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-        
+
     <!-- Sweet Alerts -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="/js/site.js"></script>
 
     <script>
-        document.getElementById('btnSubmit').addEventListener('click',displayMessage);
+        document.getElementById('btnSubmit').addEventListener('click', getValues);
     </script>
 </body>
 
