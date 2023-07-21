@@ -8,16 +8,27 @@ function getValues() {
     startNumber = Number(startNumber);
     endNumber = Number(endNumber);
 
-    if (startNumber > endNumber) {
-        //display an error message
+    // make sure we got actual numbers
+    if (isNaN(startNumber) == true || isNaN(endNumber) == true) {
+       
+        Swal.fire({
+            title: 'Oops!',
+            text: 'Hyaku only works with numbers',
+            icon: 'error',
+            backdrop: false
+        });
+
+        // make sure the end is greater than the start
+    } else if (startNumber > endNumber) {
+       
         Swal.fire({
             title: 'Oops!',
             text: 'The starting number must be less than the ending number',
             icon: 'error',
             backdrop: false
         });
-        
     } else {
+        // display the numbers if everything is ok
         let numberArray = generateNumbers(startNumber, endNumber);
 
         displayNumbers(numberArray);
