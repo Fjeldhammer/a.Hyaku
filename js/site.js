@@ -8,9 +8,21 @@ function getValues() {
     startNumber = Number(startNumber);
     endNumber = Number(endNumber);
 
-    let numberArray = generateNumbers(startNumber, endNumber);
+    if (startNumber > endNumber) {
+        //display an error message
+        Swal.fire({
+            title: 'Oops!',
+            text: 'The starting number must be less than the ending number',
+            icon: 'error',
+            backdrop: false
+        });
+        
+    } else {
+        let numberArray = generateNumbers(startNumber, endNumber);
 
-    displayNumbers(numberArray);
+        displayNumbers(numberArray);
+    }
+
 }
 
 // Business logic -creates every number in the input range
