@@ -27,6 +27,16 @@ function getValues() {
             icon: 'error',
             backdrop: false
         });
+    
+        // keeps endNumber input below threshold 5000
+    } else if (endNumber > 5000) {
+        Swal.fire({
+            title: 'Oops!',
+            text: 'The ending number must be less than 5000',
+            icon: 'error',
+            backdrop: false
+        });
+
     } else {
         // display the numbers if everything is ok
         let numberArray = generateNumbers(startNumber, endNumber);
