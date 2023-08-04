@@ -12,6 +12,19 @@
     --wf-theme-850: hsl(216, 50%, 16%);
     --wf-theme-900: hsl(216, 50%, 11%);
 
+    --wf-gray-core: #adb5bd;
+    --wf-gray-100: hsl(210, 17%, 98%);
+    --wf-gray-150: hsl(210, 17%, 93%);
+    --wf-gray-200: hsl(210, 17%, 88%);
+    --wf-gray-300: hsl(210, 17%, 78%);
+    --wf-gray-400: hsl(210, 17%, 68%);
+    --wf-gray-500: hsl(210, 17%, 58%);
+    --wf-gray-600: hsl(210, 17%, 48%);
+    --wf-gray-700: hsl(210, 17%, 38%);
+    --wf-gray-800: hsl(210, 17%, 28%);
+    --wf-gray-850: hsl(210, 17%, 23%);
+    --wf-gray-900: hsl(210, 17%, 18%);
+
     --wf-light-color: #deeefb;
     --wf-dark-color: #212121;
 }
@@ -37,35 +50,45 @@ footer {
 /* #endregion Sticky Footer */
 
 .btn-primary {
-    --bs-btn-bg: var(--wf-theme-600);
-    --bs-btn-border-color: var(--wf-theme-600);
-    --bs-btn-hover-bg: var(--wf-theme-700);
-    --bs-btn-hover-border-color: var(--wf-theme-700);
+    --bs-btn-bg: var(--wf-gray-700);
+    --bs-btn-border-color: var(--wf-gray-700);
+    --bs-btn-hover-bg: #d40008;
+    --bs-btn-hover-border-color: var(--wf-gray-700);
 }
 
 body {
-    background-color: var(--wf-theme-100);
+    background-color: var(--wf-gray-100);
     color: var(--wf-dark-color);
+}
+
+.navbar-brand:hover {
+    color: #d40008;
+    transition: color 0.2s;
+}
+
+.navbar-brand {
+    font-family: 'Paytone One', sans-serif;
+    font-size: xx-large;
 }
 
 .navbar,
 .footer {
-    background-color: var(--wf-theme-900);
+    background-color: var(--wf-gray-900);
 }
 
 .footer {
-    color: var(--wf-theme-200);
+    color: var(--wf-gray-200);
 }
 
 .socialicons {
     font-size: 2rem;
     padding-left: .5rem;
-    color: var(--wf-theme-300);
+    color: var(--wf-gray-300);
     transition: color 0.2s;
 }
 
 .socialicons:hover {
-    color: var(--wf-theme-core);
+    color: #d40008;
 }
 
 .app-logo {
@@ -73,7 +96,7 @@ body {
 }
 
 .checklist i {
-    color: #ED1C24;
+    color: #d40008;
     padding-right: .5rem;
 }
 
@@ -85,3 +108,4 @@ body {
 .even {
     font-weight: bolder
 }
+
